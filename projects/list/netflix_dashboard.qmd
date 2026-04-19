@@ -1,0 +1,45 @@
+---
+title: "Netflix Dashboard Analysis"
+author: "Meeval Augustine"
+date: "2024-05-15"
+description: "An MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles."
+categories: [MS Excel, Data Visualization, Market Analysis]
+---
+
+## Project Overview
+
+Built an interactive Netflix dashboard in **MS Excel** using **Pivot Tables, Pivot Charts, and Slicers** to analyze 6,000+ titles across 543 locations.
+
+**Key Achievements:**
+- Derived insights on content distribution (Movies vs TV Shows), top genres, audience ratings, and global presence.
+- Identified content growth trends (1925–2020) and delivered a visual report showcasing viewer preferences and market expansion.
+
+## Demonstrating Content Distribution with Python
+
+While the original dashboard was built in Excel, below I recreate the Content Distribution pie chart using Python (`pandas` and `matplotlib`) to demonstrate my cross-platform analytical skills.
+
+```{python}
+#| label: fig-netflix-distribution
+#| fig-cap: Netflix Content Distribution Breakdown
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Recreating the statistics found in the dashboard
+data = {'Category': ['Movies', 'TV Shows'], 'Share': [68, 32]}
+df = pd.DataFrame(data)
+
+# Visualizing with matplotlib
+fig, ax = plt.subplots(figsize=(6, 6))
+colors = ['#E50914', '#221F1F'] # Netflix brand colors
+ax.pie(df['Share'], labels=df['Category'], autopct='%1.0f%%', startangle=90, colors=colors, textprops={'color':"w", 'weight':'bold'})
+ax.set_title("Content Distribution: Movies vs TV Shows", fontsize=14, weight='bold')
+
+# Add legend outside
+ax.legend(labels=df['Category'], loc="center left", bbox_to_anchor=(1, 0.5))
+
+plt.tight_layout()
+plt.show()
+```
+
+As illustrated in @fig-netflix-distribution, Movies make up the predominant share of the content catalog.

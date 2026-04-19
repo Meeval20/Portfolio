@@ -1,0 +1,51 @@
+---
+title: "OLA Ride Analysis Dashboard"
+author: "Meeval Augustine"
+date: "2024-06-10"
+description: "A comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings."
+categories: [Power BI, MySQL, Performance Analysis, DAX]
+---
+
+## Project Overview
+
+Developed a comprehensive **Power BI** dashboard for Ola ride analysis, tracking over **93.61K bookings** and **$33.46M in booking value** to provide key business insights.
+
+**Key Deliverables:**
+- Used **MySQL** queries for fast retrieval of data for stakeholder requirements on fast decision making.
+- Analyzed and visualized ride-sharing performance by vehicle type, identifying **Prime Plus** as the top revenue generator with **$4.84M** in booking value.
+- Built a detailed cancellation analysis module, highlighting that **19%** of rides were customer-canceled versus **3.39%** driver-canceled.
+- Monitored and reported on booking success rates (**61.88%**) and failure rates (**38.12%**).
+- Designed series of visuals including line charts for daily trends and pie charts for segmentation.
+
+## Demonstrating Success Rates with Python
+
+To satisfy the Quarto environment requirements, I am demonstrating the Booking Success vs Failure rate logic using an embedded Python chunk.
+
+```{python}
+#| label: fig-ola-success
+#| fig-cap: OLA Ride Booking Outcomes
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+labels = ['Success Rate', 'Failure Rate']
+rates = [61.88, 38.12]
+colors = ['#27ae60', '#e74c3c']
+
+fig, ax = plt.subplots(figsize=(7, 4))
+bars = ax.barh(labels, rates, color=colors, edgecolor='black')
+
+# Labeling bars
+for bar in bars:
+    width = bar.get_width()
+    ax.text(width + 1, bar.get_y() + bar.get_height()/2, 
+            f'{width}%', ha='left', va='center', weight='bold')
+
+ax.set_xlim(0, 80)
+ax.set_xlabel('Percentage (%)')
+ax.set_title('Ride Booking Success vs Failure Rates', fontsize=14, pad=15)
+plt.tight_layout()
+plt.show()
+```
+
+This visualization reinforces the finding that there is a significant margin for improving operational efficiency by targeting the 38.12% failure segment.

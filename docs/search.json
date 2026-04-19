@@ -1,0 +1,128 @@
+[
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Here are some of the data analytics projects I’ve worked on recently. Each project contains interactive executable Python code that generates insights directly on the page.\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nCustomer Visa Status Analysis\n\n\n\nPython\n\nData Visualization\n\nMatplotlib\n\n\n\nAn analysis of fictional travel agency visa statuses using Pandas and Matplotlib.\n\n\n\nData Analyst Student\n\n\nApr 19, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/customer_analysis.html",
+    "href": "projects/list/customer_analysis.html",
+    "title": "Customer Visa Status Analysis",
+    "section": "",
+    "text": "This project demonstrates my ability to clean data and generate visualizations using Python. We generate a mock dataset simulating customer visa approvals for a travel agency, and then plot the results."
+  },
+  {
+    "objectID": "projects/list/customer_analysis.html#introduction",
+    "href": "projects/list/customer_analysis.html#introduction",
+    "title": "Customer Visa Status Analysis",
+    "section": "",
+    "text": "This project demonstrates my ability to clean data and generate visualizations using Python. We generate a mock dataset simulating customer visa approvals for a travel agency, and then plot the results."
+  },
+  {
+    "objectID": "projects/list/customer_analysis.html#data-generation",
+    "href": "projects/list/customer_analysis.html#data-generation",
+    "title": "Customer Visa Status Analysis",
+    "section": "Data Generation",
+    "text": "Data Generation\nWe’ll use pandas and matplotlib for this analysis.\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\n\n# Generate mock data\nnp.random.seed(42)\ncategories = ['Approved', 'Pending', 'Rejected', 'More Info Required']\ndata = np.random.choice(categories, 100, p=[0.6, 0.2, 0.1, 0.1])\n\ndf = pd.DataFrame({'Visa_Status': data})\nstatus_counts = df['Visa_Status'].value_counts()\n\nprint(\"Raw Data Sample:\")\nprint(df.head())\n\n\nRaw Data Sample:\n          Visa_Status\n0            Approved\n1  More Info Required\n2             Pending\n3            Approved\n4            Approved"
+  },
+  {
+    "objectID": "projects/list/customer_analysis.html#visualization",
+    "href": "projects/list/customer_analysis.html#visualization",
+    "title": "Customer Visa Status Analysis",
+    "section": "Visualization",
+    "text": "Visualization\nNext, we render a bar chart to visualize the distribution of visa statuses. Quarto automatically executes this code chunk and embeds the resulting plot directly in the output document.\n\n\nCode\nplt.figure(figsize=(8, 5))\nstatus_counts.plot(kind='bar', color=['#27ae60', '#f39c12', '#e74c3c', '#3498db'])\nplt.title('Customer Visa Status Overview', fontsize=14)\nplt.ylabel('Number of Applicants')\nplt.xlabel('Status')\nplt.xticks(rotation=45)\nplt.grid(axis='y', linestyle='--', alpha=0.7)\nplt.tight_layout()\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: Distribution of Visa Statuses\n\n\n\n\n\n\nObservations\nAs we can see from Figure 1, the vast majority of applications are Approved, which indicates the travel agency has a robust documentation process prior to submission."
+  },
+  {
+    "objectID": "projects/list/customer_analysis.html#advanced-markdown-mermaid-graph",
+    "href": "projects/list/customer_analysis.html#advanced-markdown-mermaid-graph",
+    "title": "Customer Visa Status Analysis",
+    "section": "Advanced Markdown: Mermaid Graph",
+    "text": "Advanced Markdown: Mermaid Graph\nHere is a flowchart representing the typical customer pipeline:\n\n\n\n\n\ngraph LR\n  A[Inquiry] --&gt; B[Booking Started]\n  B --&gt; C[Payments Received]\n  C --&gt; D[Visa Processing]\n  D --&gt; E[Docs Handover]"
+  },
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Throughout this module, I have gained substantial confidence in bridging the gap between raw data and actionable insights.\n\nKey Takeaways\n\nVersion Control: Getting comfortable with Git and GitHub has dramatically improved my workflow.\nReproducible Research: Using Quarto to blend Python code directly with my reports ensures my analysis is transparent and easily updatable.\nData Visualization: I learned how crucial narrative pacing and visual clarity are when presenting findings to non-technical stakeholders.\n\n\n\n\n\n\n\nNote\n\n\n\nBuilding this very ePortfolio in Quarto was an excellent capstone experience, marrying coding with clean web design.\n\n\n\n\n“Data is like garbage. You’d better know what you are going to do with it before you collect it.” - Mark Twain"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Meeval Augustine",
+    "section": "",
+    "text": "Detail-oriented Data Analyst with hands-on expertise in SQL, Power BI, MS Excel, and Python, delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.\nPlease explore my Projects to see examples of my work, or view my CV to learn more about my professional background."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am currently pursuing my studies in Data Analytics. I love working with big datasets, automating processes, and building predictive models."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "Background",
+    "text": "Background\n\nEducation: B.S. in Data Analytics\nLocation: Global"
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\n\nProgramming: Python (Pandas, Scikit-learn, FastAPI), R, SQL\nVisualization: Tableau, PowerBI, Quarto, Matplotlib\nWeb Development: React, Next.js, HTML/CSS"
+  },
+  {
+    "objectID": "about.html#goals",
+    "href": "about.html#goals",
+    "title": "About Me",
+    "section": "Goals",
+    "text": "Goals\nI aim to leverage data to drive meaningful business decisions and build robust, full-stack analytical applications.\n\n\n\n\n\n\nTipFun Fact\n\n\n\nI once optimized a SQL query that reduced report generation time from 4 hours to 2 minutes!"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "If you’re interested in collaborating or want to discuss data analytics opportunities, feel free to reach out.\n\nEmail:  sample@example.com\nLinkedIn:  linkedin.com/in/sample\nGitHub:  github.com/sample"
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "If you’re interested in collaborating or want to discuss data analytics opportunities, feel free to reach out.\n\nEmail:  sample@example.com\nLinkedIn:  linkedin.com/in/sample\nGitHub:  github.com/sample"
+  },
+  {
+    "objectID": "contact.html#references",
+    "href": "contact.html#references",
+    "title": "Contact & References",
+    "section": "References",
+    "text": "References\n\n\n\nName\nRole\nContact\n\n\n\n\nJane Doe\nSenior Data Scientist\njane.doe@example.com\n\n\nJohn Smith\nTech Lead\njohn.smith@example.com\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPlease reach out to me directly if you need formal letters of recommendation."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "About Me",
+    "section": "",
+    "text": "MSc Business Analytics\nDublin City University | Sep 2024 | Dublin, Ireland\nBachelors in IT Engineering, CGPA: 7.49\nRajagiri School of Engineering and Technology | Nov 2020 – May 2024 | Kerala, India\nTwelfth, Score: 91.5%\nSt. Thomas College HSS | June 2018 – Mar 2020 | Kerala, India"
+  },
+  {
+    "objectID": "about.html#training-program",
+    "href": "about.html#training-program",
+    "title": "About Me",
+    "section": "Training Program",
+    "text": "Training Program\nBesant Technologies | Sep 2024 – Mar 2025 | Bangalore, India\n\nOptimized SQL queries for scalable performance, resulting in a 25% reduction in data retrieval times across key projects, facilitating faster stakeholder decision-making.\nBuilt and automated Excel reports, utilizing pivot tables to analyze and visualize data, targeting business inefficiencies and driving 10% productivity gains.\nDeveloped interactive Power BI dashboards integrating real-time data, boosting operational efficiency by 30%.\nProficient in using Python for data manipulation, cleaning, transformation and visualization with libraries such as Pandas, NumPy and Matplotlib."
+  },
+  {
+    "objectID": "about.html#certifications",
+    "href": "about.html#certifications",
+    "title": "About Me",
+    "section": "Certifications",
+    "text": "Certifications\n\nData Analytics Training Certification\nHackerRank SQL Skill Certification Test\nCybersecurity Internship Certificate"
+  }
+]

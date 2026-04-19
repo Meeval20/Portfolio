@@ -1,22 +1,17 @@
 ---
-title: "Contact & References"
+title: "Contact Info"
 ---
 
 ## Get In Touch
 
 If you're interested in collaborating or want to discuss data analytics opportunities, feel free to reach out.
 
-- **Email**: {{< fa envelope >}} sample@example.com
-- **LinkedIn**: {{< fa brands linkedin >}} [linkedin.com/in/sample](https://linkedin.com)
-- **GitHub**: {{< fa brands github >}} [github.com/sample](https://github.com)
-
-## References
-
-| Name | Role | Contact |
-|------|------|---------|
-| Jane Doe | Senior Data Scientist | jane.doe@example.com |
-| John Smith | Tech Lead | john.smith@example.com |
+- **Email**: {{< fa envelope >}} augustinemeeval@gmail.com
+- **Phone**: {{< fa phone >}} +353-892038335
+- **Address**: {{< fa home >}} 109 Parnell Road, Dublin 1
+- **LinkedIn**: {{< fa brands linkedin >}} [linkedin.com/in/meeval-augustine-60518323a](https://www.linkedin.com/in/meeval-augustine-60518323a)
+- **GitHub**: {{< fa brands github >}} [github.com/Meeval20](https://github.com/Meeval20)
 
 ::: {.callout-important}
-Please reach out to me directly if you need formal letters of recommendation.
+Please reach out to me directly if you need formal letters of recommendation or further details regarding my portfolio.
 :::
