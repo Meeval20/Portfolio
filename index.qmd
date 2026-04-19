@@ -15,6 +15,6 @@ about:
       href: mailto:augustinemeeval@gmail.com
 ---
 
-Detail-oriented Data Analyst with hands-on expertise in **SQL, Power BI, MS Excel, and Python**, delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.
+Detail-oriented Business Analyst with hands-on expertise in **SQL, Power BI, MS Excel, and Python**, delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.
 
 Please explore my [Projects](projects/index.qmd) to see examples of my work, or view my [CV](cv/cv.pdf) to learn more about my professional background.

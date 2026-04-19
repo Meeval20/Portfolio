@@ -2,9 +2,9 @@
   {
     "objectID": "reflection.html",
     "href": "reflection.html",
-    "title": "Reflection",
+    "title": "REFLECTION",
     "section": "",
-    "text": "Throughout this module, I have gained substantial confidence in bridging the gap between raw data and actionable insights.\n\nKey Takeaways\n1. Version Control: Getting comfortable with Git and GitHub has dramatically improved my workflow.\n2. Reproducible Research: Using Quarto to blend Python code directly with my reports ensures my analysis is transparent and easily updatable.\n3. Data Visualization: I learned how crucial narrative pacing and visual clarity are when presenting findings to non-technical stakeholders."
+    "text": "REFLECTION\nThroughout this module, I have gained substantial confidence in bridging the gap between raw data and actionable insights.\n\nKey Takeaways\n1. Version Control: Getting comfortable with Git and GitHub has dramatically improved my workflow.\n2. Reproducible Research: Using Quarto to blend Python code directly with my reports ensures my analysis is transparent and easily updatable.\n3. Data Visualization: I learned how crucial narrative pacing and visual clarity are when presenting findings to non-technical stakeholders."
   },
   {
     "objectID": "projects/list/netflix_dashboard.html",
@@ -32,28 +32,28 @@
     "href": "index.html",
     "title": "Meeval Augustine",
     "section": "",
-    "text": "Detail-oriented Data Analyst with hands-on expertise in SQL, Power BI, MS Excel, and Python, delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.\nPlease explore my Projects to see examples of my work, or view my CV to learn more about my professional background."
+    "text": "Detail-oriented Business Analyst with hands-on expertise in SQL, Power BI, MS Excel, and Python, delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.\nPlease explore my Projects to see examples of my work, or view my CV to learn more about my professional background."
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
-    "title": "Contact Info",
+    "title": "CONTACT INFO",
     "section": "",
-    "text": "If you’re interested in collaborating or want to discuss data analytics opportunities, feel free to reach out.\n\n\nEmail:  augustinemeeval@gmail.com\n\n\nPhone:  +353-892038335\n\n\nAddress:  109 Parnell Road, Dublin 1\n\n\nLinkedIn:  linkedin.com/in/meeval-augustine-60518323a\n\n\nGitHub:  github.com/Meeval20"
+    "text": "If you’re interested in collaborating or want to discuss business analytics opportunities, feel free to reach out.\n\n\nEmail:  augustinemeeval@gmail.com\n\n\nPhone:  +353-892038335\n\n\nAddress:  109 Parnell Road, Dublin 1\n\n\nLinkedIn:  linkedin.com/in/meeval-augustine-60518323a\n\n\nGitHub:  github.com/Meeval20"
   },
   {
     "objectID": "contact.html#get-in-touch",
     "href": "contact.html#get-in-touch",
-    "title": "Contact Info",
+    "title": "CONTACT INFO",
     "section": "",
-    "text": "If you’re interested in collaborating or want to discuss data analytics opportunities, feel free to reach out.\n\n\nEmail:  augustinemeeval@gmail.com\n\n\nPhone:  +353-892038335\n\n\nAddress:  109 Parnell Road, Dublin 1\n\n\nLinkedIn:  linkedin.com/in/meeval-augustine-60518323a\n\n\nGitHub:  github.com/Meeval20"
+    "text": "If you’re interested in collaborating or want to discuss business analytics opportunities, feel free to reach out.\n\n\nEmail:  augustinemeeval@gmail.com\n\n\nPhone:  +353-892038335\n\n\nAddress:  109 Parnell Road, Dublin 1\n\n\nLinkedIn:  linkedin.com/in/meeval-augustine-60518323a\n\n\nGitHub:  github.com/Meeval20"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About Meeval",
     "section": "",
-    "text": "Detail-oriented Data Analyst with hands-on expertise in SQL, Power BI, MS Excel and Python delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments."
+    "text": "Detail-oriented Business Analyst with hands-on expertise in SQL, Power BI, MS Excel and Python delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments."
   },
   {
     "objectID": "about.html#education",
@@ -95,7 +95,7 @@
     "href": "projects/index.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are some of the data analytics projects I’ve worked on recently. Each project contains interactive executable Python code that generates insights directly on the page.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nOLA Ride Analysis Dashboard\n\n\n\nPower BI\n\nMySQL\n\nPerformance Analysis\n\nDAX\n\n\n\nA comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings.\n\n\n\nMeeval Augustine\n\n\nJun 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetflix Dashboard Analysis\n\n\n\nMS Excel\n\nData Visualization\n\nMarket Analysis\n\n\n\nAn MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles.\n\n\n\nMeeval Augustine\n\n\nMay 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Here are some of the business analytics projects I’ve worked on recently. Each project contains interactive executable Python code that generates insights directly on the page.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nOLA Ride Analysis Dashboard\n\n\n\nPower BI\n\nMySQL\n\nPerformance Analysis\n\nDAX\n\n\n\nA comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings.\n\n\n\nMeeval Augustine\n\n\nJun 10, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nNetflix Dashboard Analysis\n\n\n\nMS Excel\n\nData Visualization\n\nMarket Analysis\n\n\n\nAn MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles.\n\n\n\nMeeval Augustine\n\n\nMay 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/list/ola_ride_analysis.html",

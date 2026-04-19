@@ -1,9 +1,10 @@
 ---
-title: "Reflection"
 toc: false
 ---
 
 ::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 65vh; text-align: center; max-width: 800px; margin: 0 auto;"}
+
+# REFLECTION
 
 Throughout this module, I have gained substantial confidence in bridging the gap between raw data and actionable insights.
 
