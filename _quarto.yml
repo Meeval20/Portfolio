@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Meeval Augustine"
+  site-url: "https://Meeval20.github.io/Portfolio"
   favicon: "images/favicon.ico"
   navbar:
     logo: "images/logo.png"
