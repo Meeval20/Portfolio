@@ -8,11 +8,27 @@ Detail-oriented Business Analyst with hands-on expertise in **SQL, Power BI, MS 
 
 ## Education
 
-| Degree | Institution | Period | Location |
-|--------|-------------|--------|----------|
-| **MSc Business Analytics** | Dublin City University | Sep 2024 – Present | Dublin, Ireland |
-| **B.E. IT Engineering** — CGPA 7.49 | Rajagiri School of Engineering & Technology | Nov 2020 – May 2024 | Kerala, India |
-| **Twelfth** — Score 91.5% | St. Thomas College HSS | Jun 2018 – Mar 2020 | Kerala, India |
+::: {.edu-cards}
+
+::: {.edu-card}
+🎓 **MSc Business Analytics**  
+Dublin City University · Dublin, Ireland  
+*Sep 2024 – Present*
+:::
+
+::: {.edu-card}
+🎓 **B.E. IT Engineering** — CGPA 7.49  
+Rajagiri School of Engineering & Technology · Kerala, India  
+*Nov 2020 – May 2024*
+:::
+
+::: {.edu-card}
+🎓 **Twelfth** — Score 91.5%  
+St. Thomas College HSS · Kerala, India  
+*Jun 2018 – Mar 2020*
+:::
+
+:::
 
 ---
 

@@ -420,12 +420,80 @@ a:hover {
 }
 
 /* ================================================
+   EDUCATION CARDS (replaces broken mobile table)
+   ================================================ */
+.edu-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.edu-card {
+  background: rgba(22, 28, 39, 0.7);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-left: 4px solid #38bdf8;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  line-height: 1.7;
+  animation: fadeInUp 0.5s ease-out forwards;
+  transition: all 0.2s ease;
+}
+
+.edu-card:hover {
+  background: rgba(56, 189, 248, 0.05);
+  border-left-color: #d4a847;
+  transform: translateX(3px);
+}
+
+/* ================================================
    RESPONSIVE
    ================================================ */
 @media (max-width: 768px) {
-  h1 { font-size: 1.8rem; }
-  h2 { font-size: 1.3rem; }
-  .navbar { padding: 0.5rem 1rem; }
+  /* Typography */
+  h1 { font-size: 1.6rem !important; }
+  h2 { font-size: 1.2rem; }
+
+  /* Navbar — prevent name cut-off */
+  .navbar { padding: 0.4rem 0.75rem !important; }
+  .navbar-title { font-size: 0.95rem !important; white-space: nowrap; }
+  .navbar-brand { flex-shrink: 0; min-width: 0; overflow: visible; }
+  .navbar-brand img { max-height: 32px !important; margin-right: 7px; }
+
+  /* Listing grid — single column on mobile */
+  .quarto-listing-cols-3 { grid-template-columns: 1fr !important; }
+
+  /* Footer — slim single-line strip on mobile */
+  .nav-footer {
+    padding: 0.3rem 0.75rem !important;
+    min-height: unset !important;
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+  }
+  .nav-footer .nav-footer-left,
+  .nav-footer .nav-footer-center,
+  .nav-footer .nav-footer-right {
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1.2 !important;
+  }
+  footer.footer { padding: 0 !important; }
+
+  /* Skill tags wrap nicely */
+  .skill-tag { font-size: 0.72rem; padding: 0.2rem 0.55rem; }
+
+  /* Reflection/Contact center layout */
+  div[style*="min-height: 65vh"] {
+    padding: 2rem 1rem !important;
+    min-height: auto !important;
+  }
+
+  /* General horizontal overflow prevention */
+  body { overflow-x: hidden; }
+  .container, .container-fluid { padding-left: 1rem; padding-right: 1rem; }
+
+  /* Project page code blocks */
+  pre, code { font-size: 0.78rem !important; }
 }
 
 /* ================================================
