@@ -1,0 +1,56 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: 'Inter', sans-serif !default;
+$primary: #2c3e50 !default;
+$secondary: #e74c3c !default;
+$body-bg: #fdfdfd !default;
+$body-color: #333333 !default;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+/*-- scss:rules --*/
+body {
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Animations for modern feel */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.quarto-title, .about-contents, .card {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.callout {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,20 @@
+---
+title: "Data Analyst Portfolio"
+image: images/profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+    - icon: envelope
+      text: Email
+      href: mailto:test@example.com
+---
+
+Welcome to my professional ePortfolio! I am a Data Analyst student passionate about uncovering insights and telling stories through data. 
+
+Please explore my [Projects](projects/index.qmd) to see examples of my work, or view my [CV](cv/cv.pdf) to learn more about my professional background.

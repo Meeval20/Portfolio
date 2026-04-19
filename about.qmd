@@ -1,0 +1,22 @@
+---
+title: "About Me"
+---
+
+I am currently pursuing my studies in Data Analytics. I love working with big datasets, automating processes, and building predictive models.
+
+## Background
+- **Education**: B.S. in Data Analytics
+- **Location**: Global
+
+## Skills
+- **Programming**: Python (Pandas, Scikit-learn, FastAPI), R, SQL
+- **Visualization**: Tableau, PowerBI, Quarto, Matplotlib
+- **Web Development**: React, Next.js, HTML/CSS
+
+## Goals
+I aim to leverage data to drive meaningful business decisions and build robust, full-stack analytical applications.
+
+::: {.callout-tip}
+## Fun Fact
+I once optimized a SQL query that reduced report generation time from 4 hours to 2 minutes!
+:::
