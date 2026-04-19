@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Meeval Augustine">
+<meta name="dcterms.date" content="2024-06-10">
+<meta name="description" content="A comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings.">
 
-<title>About Meeval – Meeval Augustine</title>
+<title>OLA Ride Analysis Dashboard – Meeval Augustine</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,27 +26,64 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f8ff4dfa78a9db6115ca7135be48c86a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f8ff4dfa78a9db6115ca7135be48c86a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,21 +113,21 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.scss">
+<link rel="stylesheet" href="../../styles.scss">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./images/logo.png" alt="" class="navbar-logo light-content">
-    <img src="./images/logo.png" alt="" class="navbar-logo dark-content">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo light-content">
+    <img src="../../images/logo.png" alt="" class="navbar-logo dark-content">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Meeval Augustine</span>
     </a>
   </div>
@@ -98,27 +138,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects/index.html"> 
+    <a class="nav-link" href="../../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../../cv.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./reflection.html"> 
+    <a class="nav-link" href="../../reflection.html"> 
 <span class="menu-text">Reflection</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./contact.html"> 
+    <a class="nav-link" href="../../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -144,31 +184,43 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#education" id="toc-education" class="nav-link active" data-scroll-target="#education">Education</a></li>
-  <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
-  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#certifications" id="toc-certifications" class="nav-link" data-scroll-target="#certifications">Certifications</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About Meeval</h1>
-</div>
+<h1 class="title">OLA Ride Analysis Dashboard</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Power BI</div>
+    <div class="quarto-category">MySQL</div>
+    <div class="quarto-category">Performance Analysis</div>
+    <div class="quarto-category">DAX</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    A comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Meeval Augustine </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 10, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -178,93 +230,54 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Detail-oriented Data Analyst with hands-on expertise in <strong>SQL, Power BI, MS Excel and Python</strong> delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.</p>
-<hr>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 33%">
-<col style="width: 20%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Degree</th>
-<th>Institution</th>
-<th>Period</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>MSc Business Analytics</strong></td>
-<td>Dublin City University</td>
-<td>Sep 2024 – Present</td>
-<td>Dublin, Ireland</td>
-</tr>
-<tr class="even">
-<td><strong>B.E. IT Engineering</strong> — CGPA 7.49</td>
-<td>Rajagiri School of Engineering &amp; Technology</td>
-<td>Nov 2020 – May 2024</td>
-<td>Kerala, India</td>
-</tr>
-<tr class="odd">
-<td><strong>Twelfth</strong> — Score 91.5%</td>
-<td>St.&nbsp;Thomas College HSS</td>
-<td>Jun 2018 – Mar 2020</td>
-<td>Kerala, India</td>
-</tr>
-</tbody>
-</table>
-<hr>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p><a href="https://github.com/Meeval20/OLA-RIDE-ANALYSIS" target="_blank" class="cv-download-btn" style="margin-bottom: 1.5rem;"> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp; View Full Project on GitHub </a></p>
+<p>Developed a comprehensive <strong>Power BI</strong> dashboard for Ola ride analysis, tracking over <strong>93.61K bookings</strong> and <strong>$33.46M in booking value</strong> to provide key business insights.</p>
+<p><strong>Key Deliverables:</strong> - Used <strong>MySQL</strong> queries for fast retrieval of data for stakeholder requirements on fast decision making. - Analyzed and visualized ride-sharing performance by vehicle type, identifying <strong>Prime Plus</strong> as the top revenue generator with <strong>$4.84M</strong> in booking value. - Built a detailed cancellation analysis module, highlighting that <strong>19%</strong> of rides were customer-canceled versus <strong>3.39%</strong> driver-canceled. - Monitored and reported on booking success rates (<strong>61.88%</strong>) and failure rates (<strong>38.12%</strong>). - Designed series of visuals including line charts for daily trends and pie charts for segmentation.</p>
 </section>
-<section id="training" class="level2">
-<h2 class="anchored" data-anchor-id="training">Training</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="demonstrating-success-rates-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="demonstrating-success-rates-with-python">Demonstrating Success Rates with Python</h2>
+<p>To satisfy the Quarto environment requirements, I am demonstrating the Booking Success vs Failure rate logic using an embedded Python chunk.</p>
+<div id="cell-fig-ola-success" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'Success Rate'</span>, <span class="st">'Failure Rate'</span>]</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rates <span class="op">=</span> [<span class="fl">61.88</span>, <span class="fl">38.12</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#27ae60'</span>, <span class="st">'#e74c3c'</span>]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">4</span>))</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>bars <span class="op">=</span> ax.barh(labels, rates, color<span class="op">=</span>colors, edgecolor<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Labeling bars</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> bar <span class="kw">in</span> bars:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    width <span class="op">=</span> bar.get_width()</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    ax.text(width <span class="op">+</span> <span class="dv">1</span>, bar.get_y() <span class="op">+</span> bar.get_height()<span class="op">/</span><span class="dv">2</span>, </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f'</span><span class="sc">{</span>width<span class="sc">}</span><span class="ss">%'</span>, ha<span class="op">=</span><span class="st">'left'</span>, va<span class="op">=</span><span class="st">'center'</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="dv">0</span>, <span class="dv">80</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Percentage (%)'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Ride Booking Success vs Failure Rates'</span>, fontsize<span class="op">=</span><span class="dv">14</span>, pad<span class="op">=</span><span class="dv">15</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-ola-success" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ola-success-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="ola_ride_analysis_files/figure-html/fig-ola-success-output-1.png" width="662" height="374" class="figure-img">
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Besant Technologies | Bangalore, India | Sep 2024 – Mar 2025
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ola-success-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: OLA Ride Booking Outcomes
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Optimized <strong>SQL</strong> queries for scalable performance, achieving a <strong>25% reduction</strong> in data retrieval times.</li>
-<li>Built and automated <strong>Excel</strong> reports utilizing pivot tables, driving <strong>10% productivity gains</strong>.</li>
-<li>Developed interactive <strong>Power BI</strong> dashboards integrating real-time data, boosting operational efficiency by <strong>30%</strong>.</li>
-<li>Proficient in <strong>Python</strong> for data manipulation, cleaning, transformation, and visualization with <strong>Pandas, NumPy &amp; Matplotlib</strong>.</li>
-</ul>
 </div>
-</div>
-<hr>
-</section>
-<section id="skills" class="level2">
-<h2 class="anchored" data-anchor-id="skills">Skills</h2>
-<p><strong>Programming Languages</strong></p>
-<div style="margin:0.5rem 0 1.2rem 0;">
-<p><span class="skill-tag">SQL</span> <span class="skill-tag">Python</span> <span class="skill-tag">HTML</span> <span class="skill-tag">CSS</span></p>
-</div>
-<p><strong>Data Visualization Tools</strong></p>
-<div style="margin:0.5rem 0 1.2rem 0;">
-<p><span class="skill-tag">MS Excel</span> <span class="skill-tag">Power BI</span> <span class="skill-tag">DAX</span> <span class="skill-tag">Matplotlib</span> <span class="skill-tag">Pandas</span></p>
-</div>
-<p><strong>Soft Skills</strong></p>
-<div style="margin:0.5rem 0 1.2rem 0;">
-<p><span class="skill-tag">Decision Making</span> <span class="skill-tag">Critical Thinking</span> <span class="skill-tag">Communication</span> <span class="skill-tag">Teamwork</span> <span class="skill-tag">Adaptability</span></p>
-</div>
-<hr>
-</section>
-<section id="certifications" class="level2">
-<h2 class="anchored" data-anchor-id="certifications">Certifications</h2>
-<ul>
-<li>🏅 <strong>Data Analytics Training Certification</strong></li>
-<li>🏅 <strong>HackerRank SQL Skill Certification</strong></li>
-<li>🏅 <strong>Cybersecurity Internship Certificate</strong></li>
-</ul>
+<p>This visualization reinforces the finding that there is a significant margin for improving operational efficiency by targeting the 38.12% failure segment.</p>
 
 
 </section>

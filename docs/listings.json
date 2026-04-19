@@ -2,7 +2,8 @@
   {
     "listing": "/projects/index.html",
     "items": [
-      "/projects/list/customer_analysis.html"
+      "/projects/list/ola_ride_analysis.html",
+      "/projects/list/netflix_dashboard.html"
     ]
   }
 ]

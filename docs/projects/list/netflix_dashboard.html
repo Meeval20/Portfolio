@@ -6,11 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Data Analyst Student">
-<meta name="dcterms.date" content="2024-04-19">
-<meta name="description" content="An analysis of fictional travel agency visa statuses using Pandas and Matplotlib.">
+<meta name="author" content="Meeval Augustine">
+<meta name="dcterms.date" content="2024-05-15">
+<meta name="description" content="An MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles.">
 
-<title>Customer Visa Status Analysis – My ePortfolio</title>
+<title>Netflix Dashboard Analysis – Meeval Augustine</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -81,7 +81,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ff6db9826b2d993648c24e5ed52e3772.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f8ff4dfa78a9db6115ca7135be48c86a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,15 +111,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.scss">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -129,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <img src="../../images/logo.png" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">My ePortfolio</span>
+    <span class="navbar-title">Meeval Augustine</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -151,6 +150,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../reflection.html"> 
 <span class="menu-text">Reflection</span></a>
   </li>  
@@ -160,12 +163,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../../cv/cv.pdf" target="_blank"> 
-<span class="menu-text">CV</span></a>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/Meeval20" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/myusername" target="_blank"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/meeval-augustine-60518323a" target="_blank"> <i class="bi bi-linkedin" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -180,37 +184,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#data-generation" id="toc-data-generation" class="nav-link" data-scroll-target="#data-generation">Data Generation</a></li>
-  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization">Visualization</a>
-  <ul class="collapse">
-  <li><a href="#observations" id="toc-observations" class="nav-link" data-scroll-target="#observations">Observations</a></li>
-  </ul></li>
-  <li><a href="#advanced-markdown-mermaid-graph" id="toc-advanced-markdown-mermaid-graph" class="nav-link" data-scroll-target="#advanced-markdown-mermaid-graph">Advanced Markdown: Mermaid Graph</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Customer Visa Status Analysis</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+<h1 class="title">Netflix Dashboard Analysis</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Python</div>
+    <div class="quarto-category">MS Excel</div>
     <div class="quarto-category">Data Visualization</div>
-    <div class="quarto-category">Matplotlib</div>
+    <div class="quarto-category">Market Analysis</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    An analysis of fictional travel agency visa statuses using Pandas and Matplotlib.
+    An MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles.
   </div>
 </div>
 
@@ -220,14 +210,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Data Analyst Student </p>
+             <p>Meeval Augustine </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 19, 2024</p>
+      <p class="date">May 15, 2024</p>
     </div>
   </div>
   
@@ -239,98 +229,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This project demonstrates my ability to clean data and generate visualizations using Python. We generate a mock dataset simulating customer visa approvals for a travel agency, and then plot the results.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p><a href="https://github.com/Meeval20/Netflix-Dashboard" target="_blank" class="cv-download-btn" style="margin-bottom: 1.5rem;"> <i class="fa-brands fa-github" aria-label="github"></i> &nbsp; View Full Project on GitHub </a></p>
+<p>Built an interactive Netflix dashboard in <strong>MS Excel</strong> using <strong>Pivot Tables, Pivot Charts, and Slicers</strong> to analyze 6,000+ titles across 543 locations.</p>
+<p><strong>Key Achievements:</strong> - Derived insights on content distribution (Movies vs TV Shows), top genres, audience ratings, and global presence. - Identified content growth trends (1925–2020) and delivered a visual report showcasing viewer preferences and market expansion.</p>
 </section>
-<section id="data-generation" class="level2">
-<h2 class="anchored" data-anchor-id="data-generation">Data Generation</h2>
-<p>We’ll use <code>pandas</code> and <code>matplotlib</code> for this analysis.</p>
-<div id="ba092188" class="cell" data-execution_count="1">
+<section id="demonstrating-content-distribution-with-python" class="level2">
+<h2 class="anchored" data-anchor-id="demonstrating-content-distribution-with-python">Demonstrating Content Distribution with Python</h2>
+<p>While the original dashboard was built in Excel, below I recreate the Content Distribution pie chart using Python (<code>pandas</code> and <code>matplotlib</code>) to demonstrate my cross-platform analytical skills.</p>
+<div id="cell-fig-netflix-distribution" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate mock data</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'Approved'</span>, <span class="st">'Pending'</span>, <span class="st">'Rejected'</span>, <span class="st">'More Info Required'</span>]</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.choice(categories, <span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.6</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>])</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'Visa_Status'</span>: data})</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>status_counts <span class="op">=</span> df[<span class="st">'Visa_Status'</span>].value_counts()</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Raw Data Sample:"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>Raw Data Sample:
-          Visa_Status
-0            Approved
-1  More Info Required
-2             Pending
-3            Approved
-4            Approved</code></pre>
-</div>
-</div>
-</section>
-<section id="visualization" class="level2">
-<h2 class="anchored" data-anchor-id="visualization">Visualization</h2>
-<p>Next, we render a bar chart to visualize the distribution of visa statuses. Quarto automatically executes this code chunk and embeds the resulting plot directly in the output document.</p>
-<div id="cell-fig-visastatus" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>status_counts.plot(kind<span class="op">=</span><span class="st">'bar'</span>, color<span class="op">=</span>[<span class="st">'#27ae60'</span>, <span class="st">'#f39c12'</span>, <span class="st">'#e74c3c'</span>, <span class="st">'#3498db'</span>])</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Customer Visa Status Overview'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Applicants'</span>)</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Status'</span>)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreating the statistics found in the dashboard</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Category'</span>: [<span class="st">'Movies'</span>, <span class="st">'TV Shows'</span>], <span class="st">'Share'</span>: [<span class="dv">68</span>, <span class="dv">32</span>]}</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizing with matplotlib</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">6</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#E50914'</span>, <span class="st">'#221F1F'</span>] <span class="co"># Netflix brand colors</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>ax.pie(df[<span class="st">'Share'</span>], labels<span class="op">=</span>df[<span class="st">'Category'</span>], autopct<span class="op">=</span><span class="st">'%1.0f</span><span class="sc">%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">90</span>, colors<span class="op">=</span>colors, textprops<span class="op">=</span>{<span class="st">'color'</span>:<span class="st">"w"</span>, <span class="st">'weight'</span>:<span class="st">'bold'</span>})</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Content Distribution: Movies vs TV Shows"</span>, fontsize<span class="op">=</span><span class="dv">14</span>, weight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Add legend outside</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>ax.legend(labels<span class="op">=</span>df[<span class="st">'Category'</span>], loc<span class="op">=</span><span class="st">"center left"</span>, bbox_to_anchor<span class="op">=</span>(<span class="dv">1</span>, <span class="fl">0.5</span>))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-display">
-<div id="fig-visastatus" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-netflix-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-visastatus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="customer_analysis_files/figure-html/fig-visastatus-output-1.png" width="758" height="469" class="figure-img">
+<div aria-describedby="fig-netflix-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="netflix_dashboard_files/figure-html/fig-netflix-distribution-output-1.png" width="574" height="471" class="figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visastatus-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Distribution of Visa Statuses
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-netflix-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Netflix Content Distribution Breakdown
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<section id="observations" class="level3">
-<h3 class="anchored" data-anchor-id="observations">Observations</h3>
-<p>As we can see from <a href="#fig-visastatus" class="quarto-xref">Figure&nbsp;1</a>, the vast majority of applications are <strong>Approved</strong>, which indicates the travel agency has a robust documentation process prior to submission.</p>
-</section>
-</section>
-<section id="advanced-markdown-mermaid-graph" class="level2">
-<h2 class="anchored" data-anchor-id="advanced-markdown-mermaid-graph">Advanced Markdown: Mermaid Graph</h2>
-<p>Here is a flowchart representing the typical customer pipeline:</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph LR
-  A[Inquiry] --&gt; B[Booking Started]
-  B --&gt; C[Payments Received]
-  C --&gt; D[Visa Processing]
-  D --&gt; E[Docs Handover]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p>As illustrated in <a href="#fig-netflix-distribution" class="quarto-xref">Figure&nbsp;1</a>, Movies make up the predominant share of the content catalog.</p>
 
-
-<!-- -->
 
 </section>
 
@@ -405,57 +349,6 @@ Figure&nbsp;1: Distribution of Visa Statuses
         container: window.document.getElementById('quarto-embedded-source-code-modal')
       });
       clipboardModal.on('success', onCopySuccess);
-    }
-    const viewSource = window.document.getElementById('quarto-view-source') ||
-                       window.document.getElementById('quarto-code-tools-source');
-    if (viewSource) {
-      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-      viewSource.addEventListener("click", function(e) {
-        if (sourceUrl) {
-          // rstudio viewer pane
-          if (/\bcapabilities=\b/.test(window.location)) {
-            window.open(sourceUrl);
-          } else {
-            window.location.href = sourceUrl;
-          }
-        } else {
-          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-          modal.show();
-        }
-        return false;
-      });
-    }
-    function toggleCodeHandler(show) {
-      return function(e) {
-        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-        for (let i=0; i<detailsSrc.length; i++) {
-          const details = detailsSrc[i].parentElement;
-          if (show) {
-            details.open = true;
-          } else {
-            details.removeAttribute("open");
-          }
-        }
-        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-        const fromCls = show ? "hidden" : "unhidden";
-        const toCls = show ? "unhidden" : "hidden";
-        for (let i=0; i<cellCodeDivs.length; i++) {
-          const codeDiv = cellCodeDivs[i];
-          if (codeDiv.classList.contains(fromCls)) {
-            codeDiv.classList.remove(fromCls);
-            codeDiv.classList.add(toCls);
-          } 
-        }
-        return false;
-      }
-    }
-    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-    if (hideAllCode) {
-      hideAllCode.addEventListener("click", toggleCodeHandler(false));
-    }
-    const showAllCode = window.document.getElementById("quarto-show-all-code");
-    if (showAllCode) {
-      showAllCode.addEventListener("click", toggleCodeHandler(true));
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
@@ -785,78 +678,12 @@ Figure&nbsp;1: Distribution of Visa Statuses
       }
     }
   });
-  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Customer Visa Status Analysis"</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> "Data Analyst Student"</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "2024-04-19"</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "An analysis of fictional travel agency visa statuses using Pandas and Matplotlib."</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="an">categories:</span><span class="co"> [Python, Data Visualization, Matplotlib]</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>This project demonstrates my ability to clean data and generate visualizations using Python. We generate a mock dataset simulating customer visa approvals for a travel agency, and then plot the results.</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Data Generation</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>We'll use <span class="in">`pandas`</span> and <span class="in">`matplotlib`</span> for this analysis.</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate mock data</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'Approved'</span>, <span class="st">'Pending'</span>, <span class="st">'Rejected'</span>, <span class="st">'More Info Required'</span>]</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.choice(categories, <span class="dv">100</span>, p<span class="op">=</span>[<span class="fl">0.6</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>, <span class="fl">0.1</span>])</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame({<span class="st">'Visa_Status'</span>: data})</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>status_counts <span class="op">=</span> df[<span class="st">'Visa_Status'</span>].value_counts()</span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Raw Data Sample:"</span>)</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head())</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="fu">## Visualization</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>Next, we render a bar chart to visualize the distribution of visa statuses. Quarto automatically executes this code chunk and embeds the resulting plot directly in the output document.</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{python}</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-visastatus</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Distribution of Visa Statuses</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>status_counts.plot(kind<span class="op">=</span><span class="st">'bar'</span>, color<span class="op">=</span>[<span class="st">'#27ae60'</span>, <span class="st">'#f39c12'</span>, <span class="st">'#e74c3c'</span>, <span class="st">'#3498db'</span>])</span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Customer Visa Status Overview'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Applicants'</span>)</span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Status'</span>)</span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a><span class="fu">### Observations</span></span>
-<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>As we can see from @fig-visastatus, the vast majority of applications are **Approved**, which indicates the travel agency has a robust documentation process prior to submission.</span>
-<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Advanced Markdown: Mermaid Graph</span></span>
-<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>Here is a flowchart representing the typical customer pipeline:</span>
-<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
-<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>graph LR</span>
-<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>  A[Inquiry] --&gt; B[Booking Started]</span>
-<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>  B --&gt; C[Payments Received]</span>
-<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>  C --&gt; D[Visa Processing]</span>
-<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>  D --&gt; E[Docs Handover]</span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
-</div></div></div></div></div>
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Data Analyst Student. Built with <a href="https://quarto.org/">Quarto</a>.</p>
+<p>© 2025 Meeval Augustine. Built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

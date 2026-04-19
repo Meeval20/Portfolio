@@ -1,18 +1,15 @@
 ---
 title: "Reflection"
+toc: false
 ---
+
+::: {style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 65vh; text-align: center; max-width: 800px; margin: 0 auto;"}
 
 Throughout this module, I have gained substantial confidence in bridging the gap between raw data and actionable insights.
 
 ### Key Takeaways
-1. **Version Control**: Getting comfortable with Git and GitHub has dramatically improved my workflow.
-2. **Reproducible Research**: Using Quarto to blend Python code directly with my reports ensures my analysis is transparent and easily updatable.
-3. **Data Visualization**: I learned how crucial narrative pacing and visual clarity are when presenting findings to non-technical stakeholders.
+**1. Version Control**: Getting comfortable with Git and GitHub has dramatically improved my workflow.  
+**2. Reproducible Research**: Using Quarto to blend Python code directly with my reports ensures my analysis is transparent and easily updatable.  
+**3. Data Visualization**: I learned how crucial narrative pacing and visual clarity are when presenting findings to non-technical stakeholders.
 
-::: {.callout-note}
-Building this very ePortfolio in Quarto was an excellent capstone experience, marrying coding with clean web design.
 :::
-
----
-
-> "Data is like garbage. You'd better know what you are going to do with it before you collect it." - Mark Twain

@@ -4,9 +4,15 @@ author: "Meeval Augustine"
 date: "2024-05-15"
 description: "An MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles."
 categories: [MS Excel, Data Visualization, Market Analysis]
+image: ../../images/netflix_thumb.png
+toc: false
 ---
 
 ## Project Overview
+
+<a href="https://github.com/Meeval20/Netflix-Dashboard" target="_blank" class="cv-download-btn" style="margin-bottom: 1.5rem;">
+  {{< fa brands github >}} &nbsp; View Full Project on GitHub
+</a>
 
 Built an interactive Netflix dashboard in **MS Excel** using **Pivot Tables, Pivot Charts, and Slicers** to analyze 6,000+ titles across 543 locations.
 

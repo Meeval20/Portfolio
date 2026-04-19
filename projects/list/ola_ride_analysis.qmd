@@ -4,9 +4,15 @@ author: "Meeval Augustine"
 date: "2024-06-10"
 description: "A comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings."
 categories: [Power BI, MySQL, Performance Analysis, DAX]
+image: ../../images/ola_thumb.png
+toc: false
 ---
 
 ## Project Overview
+
+<a href="https://github.com/Meeval20/OLA-RIDE-ANALYSIS" target="_blank" class="cv-download-btn" style="margin-bottom: 1.5rem;">
+  {{< fa brands github >}} &nbsp; View Full Project on GitHub
+</a>
 
 Developed a comprehensive **Power BI** dashboard for Ola ride analysis, tracking over **93.61K bookings** and **$33.46M in booking value** to provide key business insights.
 

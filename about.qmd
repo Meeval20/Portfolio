@@ -1,36 +1,57 @@
 ---
-title: "About Me"
+title: "About Meeval"
+---
+
+Detail-oriented Data Analyst with hands-on expertise in **SQL, Power BI, MS Excel and Python** delivering data-driven insights to enhance business efficiency and revenue growth. Skilled communicator with a talent for presenting complex data clearly and concisely to stakeholders across diverse departments.
+
 ---
 
 ## Education
 
-- **MSc Business Analytics**  
-  *Dublin City University* | Sep 2024 | Dublin, Ireland
+| Degree | Institution | Period | Location |
+|--------|-------------|--------|----------|
+| **MSc Business Analytics** | Dublin City University | Sep 2024 – Present | Dublin, Ireland |
+| **B.E. IT Engineering** — CGPA 7.49 | Rajagiri School of Engineering & Technology | Nov 2020 – May 2024 | Kerala, India |
+| **Twelfth** — Score 91.5% | St. Thomas College HSS | Jun 2018 – Mar 2020 | Kerala, India |
 
-- **Bachelors in IT Engineering, CGPA: 7.49**  
-  *Rajagiri School of Engineering and Technology* | Nov 2020 – May 2024 | Kerala, India
+---
 
-- **Twelfth, Score: 91.5%**  
-  *St. Thomas College HSS* | June 2018 – Mar 2020 | Kerala, India
+## Training
 
-## Training Program
+::: {.callout-note}
+### Besant Technologies | Bangalore, India | Sep 2024 – Mar 2025
+- Optimized **SQL** queries for scalable performance, achieving a **25% reduction** in data retrieval times.
+- Built and automated **Excel** reports utilizing pivot tables, driving **10% productivity gains**.
+- Developed interactive **Power BI** dashboards integrating real-time data, boosting operational efficiency by **30%**.
+- Proficient in **Python** for data manipulation, cleaning, transformation, and visualization with **Pandas, NumPy & Matplotlib**.
+:::
 
-**Besant Technologies** | Sep 2024 – Mar 2025 | Bangalore, India
-
-- Optimized **SQL** queries for scalable performance, resulting in a 25% reduction in data retrieval times across key projects, facilitating faster stakeholder decision-making.
-- Built and automated **Excel** reports, utilizing **pivot tables** to analyze and **visualize data**, targeting business inefficiencies and driving 10% productivity gains.
-- Developed interactive **Power BI** dashboards integrating real-time data, boosting operational efficiency by 30%.
-- Proficient in using **Python** for data manipulation, cleaning, transformation and visualization with libraries such as **Pandas, NumPy and Matplotlib**.
+---
 
 ## Skills
 
-- **Programming Languages**: SQL, Python, HTML, CSS.
-- **Data Visualization Tools**: MS Excel, Power BI, DAX.
-- **Soft Skills**: Decision Making, Critical Thinking, Verbal and Written Communication, Active Listening, Teamwork, Adaptability.
-- **Other Skills**: Data Analysis, Data Modelling, Stakeholder Engagement, Business Intelligence.
+**Programming Languages**
+
+::: {style="margin:0.5rem 0 1.2rem 0;"}
+[SQL]{.skill-tag} [Python]{.skill-tag} [HTML]{.skill-tag} [CSS]{.skill-tag}
+:::
+
+**Data Visualization Tools**
+
+::: {style="margin:0.5rem 0 1.2rem 0;"}
+[MS Excel]{.skill-tag} [Power BI]{.skill-tag} [DAX]{.skill-tag} [Matplotlib]{.skill-tag} [Pandas]{.skill-tag}
+:::
+
+**Soft Skills**
+
+::: {style="margin:0.5rem 0 1.2rem 0;"}
+[Decision Making]{.skill-tag} [Critical Thinking]{.skill-tag} [Communication]{.skill-tag} [Teamwork]{.skill-tag} [Adaptability]{.skill-tag}
+:::
+
+---
 
 ## Certifications
 
-- Data Analytics Training Certification
-- HackerRank SQL Skill Certification Test
-- Cybersecurity Internship Certificate
+- 🏅 **Data Analytics Training Certification**
+- 🏅 **HackerRank SQL Skill Certification**
+- 🏅 **Cybersecurity Internship Certificate**
