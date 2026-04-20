@@ -1,0 +1,90 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"OLA Ride Analysis Dashboard\"\n",
+        "author: \"Meeval Augustine\"\n",
+        "date: \"2024-06-10\"\n",
+        "description: \"A comprehensive Power BI dashboard for Ola ride analysis, tracking over 93.61K bookings.\"\n",
+        "categories: [Power BI, MySQL, Performance Analysis, DAX]\n",
+        "image: ../../images/ola_thumb.png\n",
+        "toc: false\n",
+        "---\n",
+        "\n",
+        "## Project Overview\n",
+        "\n",
+        "<a href=\"https://github.com/Meeval20/OLA-RIDE-ANALYSIS\" target=\"_blank\" class=\"cv-download-btn\" style=\"margin-bottom: 1.5rem;\">\n",
+        "  {{< fa brands github >}} &nbsp; View Full Project on GitHub\n",
+        "</a>\n",
+        "\n",
+        "Developed a comprehensive **Power BI** dashboard for Ola ride analysis, tracking over **93.61K bookings** and **$33.46M in booking value** to provide key business insights.\n",
+        "\n",
+        "**Key Deliverables:**\n",
+        "- Used **MySQL** queries for fast retrieval of data for stakeholder requirements on fast decision making.\n",
+        "- Analyzed and visualized ride-sharing performance by vehicle type, identifying **Prime Plus** as the top revenue generator with **$4.84M** in booking value.\n",
+        "- Built a detailed cancellation analysis module, highlighting that **19%** of rides were customer-canceled versus **3.39%** driver-canceled.\n",
+        "- Monitored and reported on booking success rates (**61.88%**) and failure rates (**38.12%**).\n",
+        "- Designed series of visuals including line charts for daily trends and pie charts for segmentation.\n",
+        "\n",
+        "## Demonstrating Success Rates with Python\n",
+        "\n",
+        "To satisfy the Quarto environment requirements, I am demonstrating the Booking Success vs Failure rate logic using an embedded Python chunk."
+      ],
+      "id": "8ff31d4b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-ola-success\n",
+        "#| fig-cap: OLA Ride Booking Outcomes\n",
+        "\n",
+        "import matplotlib.pyplot as plt\n",
+        "import numpy as np\n",
+        "\n",
+        "labels = ['Success Rate', 'Failure Rate']\n",
+        "rates = [61.88, 38.12]\n",
+        "colors = ['#27ae60', '#e74c3c']\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(7, 4))\n",
+        "bars = ax.barh(labels, rates, color=colors, edgecolor='black')\n",
+        "\n",
+        "# Labeling bars\n",
+        "for bar in bars:\n",
+        "    width = bar.get_width()\n",
+        "    ax.text(width + 1, bar.get_y() + bar.get_height()/2, \n",
+        "            f'{width}%', ha='left', va='center', weight='bold')\n",
+        "\n",
+        "ax.set_xlim(0, 80)\n",
+        "ax.set_xlabel('Percentage (%)')\n",
+        "ax.set_title('Ride Booking Success vs Failure Rates', fontsize=14, pad=15)\n",
+        "plt.tight_layout()\n",
+        "plt.show()"
+      ],
+      "id": "fig-ola-success",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "This visualization reinforces the finding that there is a significant margin for improving operational efficiency by targeting the 38.12% failure segment."
+      ],
+      "id": "e924de8f"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\ASUS\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

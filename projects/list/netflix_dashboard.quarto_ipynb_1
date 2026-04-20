@@ -1,0 +1,84 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Netflix Dashboard Analysis\"\n",
+        "author: \"Meeval Augustine\"\n",
+        "date: \"2024-05-15\"\n",
+        "description: \"An MS Excel dashboard project utilizing Pivot Tables to analyze 6,000+ titles.\"\n",
+        "categories: [MS Excel, Data Visualization, Market Analysis]\n",
+        "image: ../../images/netflix_thumb.png\n",
+        "toc: false\n",
+        "---\n",
+        "\n",
+        "## Project Overview\n",
+        "\n",
+        "<a href=\"https://github.com/Meeval20/Netflix-Dashboard\" target=\"_blank\" class=\"cv-download-btn\" style=\"margin-bottom: 1.5rem;\">\n",
+        "  {{< fa brands github >}} &nbsp; View Full Project on GitHub\n",
+        "</a>\n",
+        "\n",
+        "Built an interactive Netflix dashboard in **MS Excel** using **Pivot Tables, Pivot Charts, and Slicers** to analyze 6,000+ titles across 543 locations.\n",
+        "\n",
+        "**Key Achievements:**\n",
+        "- Derived insights on content distribution (Movies vs TV Shows), top genres, audience ratings, and global presence.\n",
+        "- Identified content growth trends (1925–2020) and delivered a visual report showcasing viewer preferences and market expansion.\n",
+        "\n",
+        "## Demonstrating Content Distribution with Python\n",
+        "\n",
+        "While the original dashboard was built in Excel, below I recreate the Content Distribution pie chart using Python (`pandas` and `matplotlib`) to demonstrate my cross-platform analytical skills."
+      ],
+      "id": "eee1b271"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-netflix-distribution\n",
+        "#| fig-cap: Netflix Content Distribution Breakdown\n",
+        "\n",
+        "import pandas as pd\n",
+        "import matplotlib.pyplot as plt\n",
+        "\n",
+        "# Recreating the statistics found in the dashboard\n",
+        "data = {'Category': ['Movies', 'TV Shows'], 'Share': [68, 32]}\n",
+        "df = pd.DataFrame(data)\n",
+        "\n",
+        "# Visualizing with matplotlib\n",
+        "fig, ax = plt.subplots(figsize=(6, 6))\n",
+        "colors = ['#E50914', '#221F1F'] # Netflix brand colors\n",
+        "ax.pie(df['Share'], labels=df['Category'], autopct='%1.0f%%', startangle=90, colors=colors, textprops={'color':\"w\", 'weight':'bold'})\n",
+        "ax.set_title(\"Content Distribution: Movies vs TV Shows\", fontsize=14, weight='bold')\n",
+        "\n",
+        "# Add legend outside\n",
+        "ax.legend(labels=df['Category'], loc=\"center left\", bbox_to_anchor=(1, 0.5))\n",
+        "\n",
+        "plt.tight_layout()\n",
+        "plt.show()"
+      ],
+      "id": "fig-netflix-distribution",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "As illustrated in @fig-netflix-distribution, Movies make up the predominant share of the content catalog."
+      ],
+      "id": "ec66a2f0"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\ASUS\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
